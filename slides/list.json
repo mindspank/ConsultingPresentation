@@ -1,0 +1,10 @@
+[
+    "index.html",
+    {
+        "attr": {
+            "data-background": "resources/applause.jpg"
+        }
+    },
+    "developer-relations.html",
+    "agenda.html"
+]
