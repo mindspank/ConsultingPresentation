@@ -35,7 +35,12 @@
     "architecture.html",
     "architecture-part2.html",
     "architecture-part3.html",
-    "extensions.html",
+    {
+      "filename": "extensions.html",
+      "attr": {
+          "data-state": "extensionslide"
+      }
+    },
     "extensions22.html",
     "capabilities.html",
     "expand.html"
