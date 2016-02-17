@@ -6,5 +6,37 @@
         }
     },
     "developer-relations.html",
-    "agenda.html"
+    "agenda.html",
+    {
+      "filename": "bipond.html",
+      "attr": {
+          "data-background": "resources/bipond.jpg" 
+      }  
+    },
+    {
+      "filename": "sea.html",
+      "attr": {
+          "data-background": "resources/sea.jpg" 
+      }  
+    },    
+    {
+        "filename": "developer-relations-part-2.html",
+        "attr": {
+            "data-background": "#fff"
+        }
+    },
+    "branchfacts.html",
+    {
+      "filename": "branchqlikheart.html",
+      "attr": {
+          "data-background": "#fff"
+      }
+    },
+    "architecture.html",
+    "architecture-part2.html",
+    "architecture-part3.html",
+    "extensions.html",
+    "extensions22.html",
+    "capabilities.html",
+    "expand.html"
 ]
