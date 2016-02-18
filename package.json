@@ -4,17 +4,10 @@
   "private": true,
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-contrib-connect": "^0.10.1",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-contrib-copy": "^0.8.0",
-    "load-grunt-tasks": "^3.2.0"
-  },
-  "engines": {
-    "node": ">=0.10.0",
-    "npm": ">=1.3.7"
-  },
-  "scripts": {
-    "test": "grunt test"
+    "load-grunt-tasks": "^3.4.0"
   },
   "dependencies": {
     "qsocks": "^2.1.12"
