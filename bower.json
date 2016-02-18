@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "reveal.js": "latest",
-    "highlightjs": "latest"
+    "highlightjs": "latest",
+    "requirejs": "~2.1.22"
   }
 }
