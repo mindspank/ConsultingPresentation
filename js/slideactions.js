@@ -14,9 +14,3 @@ window.require.config({
 });
 
 */
-
-Reveal.addEventListener('testslide', function() {
-
-    console.log('test')
-
-});

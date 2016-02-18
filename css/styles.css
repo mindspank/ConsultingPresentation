@@ -1,0 +1,8 @@
+section[data-state="search"] {
+    text-align: left;
+    font-size: 1em;
+}
+
+section[data-state="search"] > * {
+    font-size: 16px;
+}

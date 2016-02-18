@@ -43,5 +43,13 @@
     },
     "extensions22.html",
     "capabilities.html",
-    "expand.html"
+    "expand.html",
+    {
+        "filename": "search.html",
+        "attr": {
+            "data-state": "search",
+            "data-background": "#fff",
+            "class": "nopad"
+        }
+    }
 ]
