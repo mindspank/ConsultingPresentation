@@ -23,14 +23,6 @@ module.exports = (grunt) ->
                     'slides/list.json'
                 ]
                 tasks: ['buildIndex']
-
-            coffeelint:
-                files: ['Gruntfile.coffee']
-                tasks: ['coffeelint']
-
-            jshint:
-                files: ['js/*.js']
-                tasks: ['jshint']
         
         connect:
 
@@ -43,23 +35,6 @@ module.exports = (grunt) ->
                     base: '.'
                     open: true
                     livereload: true
-
-        coffeelint:
-
-            options:
-                indentation:
-                    value: 4
-                max_line_length:
-                    level: 'ignore'
-
-            all: ['Gruntfile.coffee']
-
-        jshint:
-
-            options:
-                jshintrc: '.jshintrc'
-
-            all: ['js/*.js']
 
         copy:
 
@@ -102,11 +77,6 @@ module.exports = (grunt) ->
                             slide
             grunt.file.write 'index.html', html
 
-    grunt.registerTask 'test',
-        '*Lint* javascript and coffee files.', [
-            'coffeelint'
-            'jshint'
-        ]
 
     grunt.registerTask 'serve',
         'Run presentation locally and start watch process (living document).', [
