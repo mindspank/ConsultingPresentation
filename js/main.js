@@ -67,7 +67,7 @@ require(['reveal', 'js/qlik', 'config', 'tree'], function(Reveal, qlik, config, 
 
             var app = qlik.openApp(config.apps.search, config.qlik);
             app.model.waitForOpen.promise.then(function() {
-                
+                app.clearAll();
                 senseSearch.connectWithCapabilityAPI(app);
                 
                 var slide = document.querySelector('[data-state=search]');
@@ -82,10 +82,10 @@ require(['reveal', 'js/qlik', 'config', 'tree'], function(Reveal, qlik, config, 
                         "suppressNull": true
                     },{
                         "dimension": "Trigram",
-                        "suppressNull": true
+                        "suppressNull": false
                     },{
                         "dimension": "Office",
-                        "suppressNull": true
+                        "suppressNull": false
                     },{
                         "dimension": "Country",
                         "supressNull": false
@@ -95,7 +95,10 @@ require(['reveal', 'js/qlik', 'config', 'tree'], function(Reveal, qlik, config, 
                             "name": "A-Z",
                             "order": 1,
                             "field": "FullName",
-                            "sortType": "qSortByAscii"
+                            "sortType": "qSortByExpression",
+                            "sortExpression" : {
+                                "qv": "HasImage=1"
+                            }
                         }
                     },
                     "defaultSort": "FullName",
@@ -106,9 +109,7 @@ require(['reveal', 'js/qlik', 'config', 'tree'], function(Reveal, qlik, config, 
                     "searchFields": ["FullName","Office","Tree","Country"],
                     "suggestFields": ["FullName","Office","Tree","Country"]
                 };
-            
-                searchinput.object.attach(inputOptions);
-                searchresults.object.attach(resultOptions);
+
                 searchresults.object.enableHighlighting = false;
                 searchresults.object.renderItems = function(data) {
                     var html = data.map(function(d) {
@@ -120,6 +121,11 @@ require(['reveal', 'js/qlik', 'config', 'tree'], function(Reveal, qlik, config, 
                     document.getElementById(this.resultsElement).innerHTML = html;
                 };
                
+                searchinput.object.attach(inputOptions);
+                searchresults.object.attach(resultOptions, function() {
+                    console.log(searchresults);
+                    searchresults.object.getNextBatch()
+                });
 
             });
 
