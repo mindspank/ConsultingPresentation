@@ -1,8 +1,45 @@
 section[data-state="search"] {
     text-align: left;
     font-size: 1em;
+    top: 0;
 }
 
 section[data-state="search"] > * {
     font-size: 16px;
+}
+
+.no-center {
+    top: 0 !important;
+    text-align: left !important;
+}
+
+#searchresults_results {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 500px;
+}
+
+#searchresults_results > .search-image {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+    max-width: 60px;
+    max-height: 80px;
+    flex: 1;
+}
+#searchresults_results > .search-image.big {
+    max-width: 150px;
+    max-height: 150px;
+}
+#searchinput_associationsList * {
+    color: #333 !important;
+}
+#searchinput_associations {
+    background-color: #fff !important;
+    color: #eee;
+}
+#searchinput_associationsList {
+    width: 100%;
 }

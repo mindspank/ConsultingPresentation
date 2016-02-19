@@ -44,12 +44,30 @@
     "extensions22.html",
     "capabilities.html",
     "expand.html",
+    "newexperiences.html",
+    {
+        "attr": {
+            "data-background-iframe": "http://diplomaticpulse.qlik.com"
+        }
+    },
+    {
+        "attr": {
+            "data-background-iframe": "http://viz.axisgroup.com/servicecharges/#/"
+        }
+    },    
+    {
+        "attr": {
+            "data-background-iframe": "http://viz.axisgroup.com/ticketmanager/#/overview"
+        }
+    },
+    "architeqt.html",
     {
         "filename": "search.html",
         "attr": {
             "data-state": "search",
-            "data-background": "#fff",
-            "class": "nopad"
+            "style": "top: 0;",
+            "class": "no-center"
         }
-    }
+    },
+    "exitslide.html"
 ]

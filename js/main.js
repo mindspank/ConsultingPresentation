@@ -37,6 +37,14 @@ require(['reveal', 'js/qlik', 'config'], function(Reveal, qlik, config) {
         ]
     });
     
+    Reveal.addEventListener('slidechanged', function(event) {               
+        if($(event.currentSlide).attr('data-background-iframe')) {
+            $('.reveal > .backgrounds').css('z-index', 1);
+        } else {
+            $('.reveal > .backgrounds').css('z-index', 0);
+        }                  
+    });
+    
     Reveal.addEventListener('ready', function( event ) {
 
         /**
@@ -60,14 +68,14 @@ require(['reveal', 'js/qlik', 'config'], function(Reveal, qlik, config) {
                         "dimension": "FullName",
                         "suppressNull": true
                     },{
-                        "dimension": "trigram",
-                        "suppressNull": false
+                        "dimension": "Trigram",
+                        "suppressNull": true
                     },{
                         "dimension": "Office",
-                        "suppressNull": false
+                        "suppressNull": true
                     },{
-                        "dimension": "Manager",
-                        "suppressNull": false
+                        "dimension": "Country",
+                        "supressNull": false
                     }],
                     "sortOptions": {
                         "FullName": {
@@ -77,16 +85,28 @@ require(['reveal', 'js/qlik', 'config'], function(Reveal, qlik, config) {
                             "sortType": "qSortByAscii"
                         }
                     },
-                    "defaultSort": "FullName"
+                    "defaultSort": "FullName",
+                    "pageSize": 500
                 };
                 
                 var inputOptions = {
-                    "searchFields": ["FullName","Trigram","Office","Manager","Country"],
-                    "suggestFields": ["FullName","Trigram","Office","Manager","Country"]
+                    "searchFields": ["FullName","Office","Tree","Country"],
+                    "suggestFields": ["FullName","Office","Tree","Country"]
                 };
             
                 searchinput.object.attach(inputOptions);
                 searchresults.object.attach(resultOptions);
+                searchresults.object.enableHighlighting = false;
+                searchresults.object.renderItems = function(data) {
+                    var html = data.map(function(d) {
+                        if (data.length < 20) {
+                          return '<img class="search-image plain big" src="Photos/' + d.Trigram.value + '.jpg" onError="this.onerror=null;this.src=\'resources/placeholder.png\';"/>'
+                        }
+                        return '<img class="search-image plain" src="Photos/' + d.Trigram.value + '.jpg" onError="this.onerror=null;this.src=\'resources/placeholder.png\';"/>'
+                    }).join('\n')
+                    document.getElementById(this.resultsElement).innerHTML = html;
+                };
+               
 
             });
 
