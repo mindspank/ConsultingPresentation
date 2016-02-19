@@ -22,7 +22,9 @@
     {
         "filename": "developer-relations-part-2.html",
         "attr": {
-            "data-background": "#fff"
+            "data-background": "#fff",
+            "data-state": "branchtree",
+            "id": "treeslide"
         }
     },
     "branchfacts.html",
@@ -61,6 +63,7 @@
         }
     },
     "architeqt.html",
+    "senseit.html",
     {
         "filename": "search.html",
         "attr": {

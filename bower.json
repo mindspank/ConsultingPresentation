@@ -4,6 +4,7 @@
   "dependencies": {
     "reveal.js": "latest",
     "highlightjs": "latest",
-    "requirejs": "~2.1.22"
+    "requirejs": "~2.1.22",
+    "d3": "~3.5.16"
   }
 }
