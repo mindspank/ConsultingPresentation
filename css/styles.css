@@ -12,14 +12,23 @@ section[data-state="search"] > * {
     top: 0 !important;
     text-align: left !important;
 }
-
+#senseit {
+    height: 600px;
+    width: 400px;
+    overflow: scroll;
+}
+#senseit td {
+    padding: 5px !important;
+}
+#senseit * {
+    font-size: 12px !important;  
+}
 #searchresults_results {
     overflow: auto;
     display: flex;
     flex-wrap: wrap;
     max-height: 500px;
 }
-
 #searchresults_results > .search-image {
     margin: 0;
     padding: 0;

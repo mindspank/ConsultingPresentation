@@ -43,9 +43,10 @@
           "data-state": "extensionslide"
       }
     },
-    "extensions22.html",
     "capabilities.html",
+    "extensions22.html",
     "expand.html",
+    "architeqt.html",
     "newexperiences.html",
     {
         "attr": {
@@ -62,14 +63,18 @@
             "data-background-iframe": "http://viz.axisgroup.com/ticketmanager/#/overview"
         }
     },
-    "architeqt.html",
-    "senseit.html",
     {
         "filename": "search.html",
         "attr": {
             "data-state": "search",
             "style": "top: 0;",
             "class": "no-center"
+        }
+    },
+    {
+        "attr": {
+            "data-background-video": "resources/magic.webm",
+            "data-background-video-loop": null
         }
     },
     "exitslide.html"
