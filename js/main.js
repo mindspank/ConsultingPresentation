@@ -19,6 +19,7 @@ var win = this;
 require.config(requireconfig);
 
 require(['reveal', 'js/qlik', 'config', 'tree'], function(Reveal, qlik, config, tree) {
+    
     Reveal.initialize({
         controls: true,
         progress: true,
@@ -43,7 +44,7 @@ require(['reveal', 'js/qlik', 'config', 'tree'], function(Reveal, qlik, config, 
         // Kill tree when you leave the slide.
         if($(event.previousSlide).attr('id') === 'treeslide') {
             tree.destroy();
-        };
+        };      
         // Make iframes interactive
         if($(event.currentSlide).attr('data-background-iframe')) {
             $('.reveal > .backgrounds').css('z-index', 1);
@@ -66,7 +67,6 @@ require(['reveal', 'js/qlik', 'config', 'tree'], function(Reveal, qlik, config, 
         Reveal.addEventListener('22demo', function() {           
             var code = $('#news22demo');
             var app = qlik.openApp(config.apps.search, config.qlik);
-            
             $('#newexecute').click(function() {
                 eval(code.text());
             });
@@ -76,11 +76,12 @@ require(['reveal', 'js/qlik', 'config', 'tree'], function(Reveal, qlik, config, 
          * Search slide
          */
         Reveal.addEventListener('search', function() {
-
-            var app = qlik.openApp(config.apps.search, config.qlik);
-            app.model.waitForOpen.promise.then(function() {
-                app.clearAll();
-                senseSearch.connectWithCapabilityAPI(app);
+            var searchconfig = config.qlik;
+            searchconfig.identity = '/SEARCH'
+            var searchapp = qlik.openApp(config.apps.search, config.qlik);
+            searchapp.model.waitForOpen.promise.then(function() {
+                searchapp.clearAll();
+                senseSearch.connectWithCapabilityAPI(searchapp);
                 
                 var slide = document.querySelector('[data-state=search]');
                 var searchinput = new win.SenseSearchInput("searchinput");
@@ -135,7 +136,6 @@ require(['reveal', 'js/qlik', 'config', 'tree'], function(Reveal, qlik, config, 
                
                 searchinput.object.attach(inputOptions);
                 searchresults.object.attach(resultOptions, function() {
-                    console.log(searchresults);
                     searchresults.object.getNextBatch()
                 });
 

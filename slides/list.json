@@ -20,6 +20,12 @@
       }  
     },    
     {
+      "filename": "branchqlikheart.html",
+      "attr": {
+          "data-background": "#fff"
+      }
+    },
+    {
         "filename": "developer-relations-part-2.html",
         "attr": {
             "data-background": "#fff",
@@ -29,31 +35,45 @@
     },
     "branchfacts.html",
     {
-      "filename": "branchqlikheart.html",
-      "attr": {
-          "data-background": "#fff"
-      }
+        "filename": "architecture.html",
+        "attr": {
+            "data-background": "#fff"
+        }
     },
-    "architecture.html",
     "architecture-part2.html",
-    "architecture-part3.html",
+    {
+        "filename": "architecture-part2-qap.html",
+        "attr": {
+            "data-background": "#fff"
+        }
+    },
+    "architecture-clientserver.html",
+    "breaker-slide-for-extendembed.html",
     {
       "filename": "extensions.html",
       "attr": {
           "data-state": "extensionslide"
       }
     },
+    {
+        "attr": {
+            "data-background-video": "resources/boring.webm",
+            "data-background-video-loop": null
+        }
+    },    
     "capabilities.html",
     "newsin22.html",
     {
         "filename": "newsin22-demo.html",
         "attr": {
-            "class": "no-transforms no-center",
+            "class": "no-center",
+            "id": "newsin22",
             "data-state": "22demo"
         }
     },
     "expand.html",
-    "architeqt.html",
+    "newfunctionality.html",
+    "newfunctionality-part2.html",
     "newexperiences.html",
     {
         "attr": {
