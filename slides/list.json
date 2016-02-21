@@ -62,6 +62,12 @@
         }
     },    
     "capabilities.html",
+    "capabilities-part2.html",
+    {
+        "attr": {
+            "data-background-iframe": "http://sense-demo.qlik.com/demos/usgawo/index.html"
+        }
+    },
     "newsin22.html",
     {
         "filename": "newsin22-demo.html",
