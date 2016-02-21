@@ -44,7 +44,14 @@
       }
     },
     "capabilities.html",
-    "extensions22.html",
+    "newsin22.html",
+    {
+        "filename": "newsin22-demo.html",
+        "attr": {
+            "class": "no-transforms no-center",
+            "data-state": "22demo"
+        }
+    },
     "expand.html",
     "architeqt.html",
     "newexperiences.html",

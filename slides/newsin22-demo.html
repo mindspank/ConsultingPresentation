@@ -1,0 +1,22 @@
+<p>Visualization API</p>
+<div class="plain"" style="display:flex;width:100%">
+    
+    <div style="flex:1;max-width: 400px;margin-right:20px;">  
+    <pre class="plain" style="width: 100%;box-shadow: none;background:#3f3f3f;margin-top: 0;height:420px;">
+        <code id="news22demo" class="javascript hljs" style="font-size: 0.8em;" contentEditable="true">app.visualization.create('barchart',
+    ['Country','=Count(Trigram)'],
+    {
+        'title': 'On the fly barchart',
+        'subtitle': 'wow much cool'
+    }
+).then(function(vis) {
+    vis.show("chartarea");
+});
+
+</code></pre>
+<button id="newexecute">Run code</button>
+        
+    </div>
+    
+<div id="chartarea"><div>
+</div>

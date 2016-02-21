@@ -59,6 +59,18 @@ require(['reveal', 'js/qlik', 'config', 'tree'], function(Reveal, qlik, config, 
         Reveal.addEventListener('branchtree', function() {
             tree.init();
         });
+        
+        /**
+         * News in 2.2 slide
+         */
+        Reveal.addEventListener('22demo', function() {           
+            var code = $('#news22demo');
+            var app = qlik.openApp(config.apps.search, config.qlik);
+            
+            $('#newexecute').click(function() {
+                eval(code.text());
+            });
+        });
 
         /**
          * Search slide
