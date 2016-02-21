@@ -60,7 +60,7 @@ section[data-state="search"] > * {
 #searchinput_associationsList {
     width: 100%;
 }
-#chartarea {
+#extensionchartarea, #chartarea {
     font-size: 14px;
     flex: 1;
     height: 400px;
@@ -69,7 +69,7 @@ section[data-state="search"] > * {
     padding: 10px;
     color: #333;
 }
-#newexecute {
+#extensionexecute, #newexecute {
     outline: 0;
     border: 0;
     padding: 7px 20px;
@@ -92,7 +92,9 @@ section[data-state="search"] > * {
     font-size: 16px !important;
     color: #808080 !important;
 }
-
+div[qv-extension] {
+    overflow: auto
+}
 
 
 /*

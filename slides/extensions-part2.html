@@ -1,0 +1,24 @@
+<p>Extension API</p>
+<div class="plain" style="display:flex;width:100%">
+    
+    <div style="flex:1;max-width: 600px;margin-right:20px;">  
+    <pre class="plain" style="width: 100%;box-shadow: none;background:#3f3f3f;margin-top: 0;height:420px;">
+<code id="extensioncode" class="javascript hljs" style="font-size: 0.8em;" contentEditable="true">initialProperties: {
+  qListObjectDef: {
+    qInitialDataFetch: [{
+        qWidth: 2, qHeight: 50
+    }]
+  }
+},
+paint: function ( $element, layout ) {
+   var data = layout.qListObject.qDataPages[0].qMatrix; 
+   $element.html( data.map(function(row) {
+     return row[0].qText;
+   }).join('<br>') );
+}</code></pre>
+<button id="extensionexecute">Run code</button>
+        
+    </div>
+    
+<div id="extensionchartarea"><div>
+</div>

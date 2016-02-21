@@ -49,9 +49,11 @@
     },
     "architecture-clientserver.html",
     "breaker-slide-for-extendembed.html",
+    "extensions.html",
     {
-      "filename": "extensions.html",
+      "filename": "extensions-part2.html",
       "attr": {
+          "class": "no-center",
           "data-state": "extensionslide"
       }
     },

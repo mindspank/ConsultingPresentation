@@ -7,7 +7,8 @@ var requireconfig = {
         qsocks: 'http://localhost:9000/node_modules/qsocks/qsocks.bundle',
         config: 'http://localhost:9000/js/config',
         d3: 'http://localhost:9000/bower_components/d3/d3.min',
-        tree: 'http://localhost:9000/js/branchtree'
+        tree: 'http://localhost:9000/js/branchtree',
+        svg: 'http://localhost:9000/Extensions/svgReader/svgReader'
     },
     
     baseUrl: 'https://branch.qlik.com/resources'
@@ -19,12 +20,13 @@ var win = this;
 require.config(requireconfig);
 
 require(['reveal', 'js/qlik', 'config', 'tree'], function(Reveal, qlik, config, tree) {
-    
+
     Reveal.initialize({
         controls: true,
         progress: true,
         history: true,
         center: true,
+        help: false,
 
         transition: 'slide', // none/fade/slide/convex/concave/zoom
 
@@ -59,6 +61,30 @@ require(['reveal', 'js/qlik', 'config', 'tree'], function(Reveal, qlik, config, 
          */
         Reveal.addEventListener('branchtree', function() {
             tree.init();
+        });
+        
+        /**
+         * Extension Part 2
+         */
+        Reveal.addEventListener('extensionslide', function() {
+            var counter = 1;
+            var extensionsconfig = config.qlik;
+            var extensionapp = qlik.openApp(config.apps.search, config.qlik);
+            
+            $('#extensionexecute').click(function() {
+                counter++;
+                extensionsconfig.identity = '/EXTENSION' + counter
+                
+                var extension = eval('({' + $('#extensioncode').text() + '})')
+                var extensionName = 'test' + counter;
+                
+                qlik.registerExtension(extensionName,extension);
+                extensionapp.visualization.create(extensionName, ["FullName"] ).then(function(ext) {
+                    ext.show("extensionchartarea");
+                });
+                
+            })
+            
         });
         
         /**
