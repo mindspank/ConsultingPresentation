@@ -40,18 +40,23 @@
         }
     },
     {
-        "filename": "branchfacts.html",
-        "attr": {
-            "data-background": "resources/experiment.jpg"
-        }
-    },
-    "branchstats.html",
+      "filename": "branchfacts.html",
+      "attr": {
+          "data-background": "resources/experiment.jpg"
+      }
+    }, "branchstats.html",
     {
         "attr": {
             "data-background-iframe": "http://branch.qlik.com"
         }
     },
-    "branchfuture.html",
+      "branchfuture.html",
+    {
+        "filename": "architecture.html",
+        "attr": {
+            "data-background": "#fff"
+        }
+    },
     {
         "filename": "architecture.html",
         "attr": {
@@ -67,11 +72,9 @@
     },
     "architecture-clientserver.html",
     "breaker-slide-for-extendembed.html",
-    "extensions.html",
     {
-      "filename": "extensions-part2.html",
+      "filename": "extensions.html",
       "attr": {
-          "class": "no-center",
           "data-state": "extensionslide"
       }
     },
@@ -87,11 +90,6 @@
         "attr": {
             "data-background-iframe": "http://sense-demo.qlik.com/demos/usgawo/index.html"
         }
-    },
-    {
-      "attr": {
-          "data-background-iframe": "http://webapps.qlik.com/telegraph/europeanmigration/index.html"
-      }  
     },
     "newsin22.html",
     {
