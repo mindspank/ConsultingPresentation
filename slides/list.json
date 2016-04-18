@@ -48,6 +48,11 @@
     "branchstats.html",
     {
         "attr": {
+            "data-background-iframe": "https://s3.amazonaws.com/branchsessions/index.html"
+        }
+    },
+    {
+        "attr": {
             "data-background-iframe": "http://branch.qlik.com"
         }
     },
@@ -119,6 +124,11 @@
     {
         "attr": {
             "data-background-iframe": "http://viz.axisgroup.com/ticketmanager/#/overview"
+        }
+    },
+    {
+        "attr": {
+            "data-background-iframe": "http://viz.axisgroup.com/acrossborders"
         }
     },
     {
