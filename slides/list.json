@@ -27,8 +27,9 @@
       }
     },
     {
+        "filename": "dr.html",
         "attr": {
-            "data-background": "resources/dr.png"
+            "data-background": "#fff"
         }
     },
     {
